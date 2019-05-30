@@ -7,22 +7,107 @@
     <title>Portfolio | Главная</title>
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <nav class="nav">
-          <div class="nav__item">Page1</div>
-          <div class="nav__item">Page2</div>
-          <div class="nav__item">Page3</div>
-        </nav>
+        <!-- -top-->
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-row">
+              <div class="header__socials">
+                <div class="socials"><a class="social" href="/">
+                                    <svg class="social__svg">
+                                      <use xlink:href="/images/icons/sprite.svg#yt"></use>
+                                    </svg></a><a class="social" href="/">
+                                    <svg class="social__svg">
+                                      <use xlink:href="/images/icons/sprite.svg#vk"></use>
+                                    </svg></a><a class="social" href="/">
+                                    <svg class="social__svg">
+                                      <use xlink:href="/images/icons/sprite.svg#insta"></use>
+                                    </svg></a><a class="social" href="/">
+                                    <svg class="social__svg">
+                                      <use xlink:href="/images/icons/sprite.svg#fb"></use>
+                                    </svg></a>
+                </div>
+              </div>
+              <div class="header__contacts">
+                <div class="header__contact"><a class="contact" href="tel:+7(495)6603790">
+                                    <svg class="contact__svg">
+                                      <use xlink:href="/images/icons/sprite.svg#phone"></use>
+                                    </svg>
+                    <div class="contact__title">+7 495 660 37 90</div></a></div>
+                <div class="header__contact"><a class="contact" href="mailto:+7(495)6603790">
+                                    <svg class="contact__svg">
+                                      <use xlink:href="/images/icons/sprite.svg#email"></use>
+                                    </svg>
+                    <div class="contact__title">info@21vek.ru</div></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="row header__bottom-row">
+              <div class="header__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a></div>
+              <div class="header__nav">
+                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="/">О компании</a><a class="nav__item" href="/">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="/">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="/">контакты</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       <div class="page">
-        <h1>Страничка "Главная"
-          <svg class="svg">
-            <use xlink:href="/images/icons/sprite.svg#001-twitter"></use>
-          </svg>
-        </h1>
+        <main class="main">
+          <section class="main__slider">
+            <div class="slider">
+              <div class="swiper-container slider__container">
+                <div class="swiper-wrapper slider__wrapper">
+                  <div class="swiper-slide slider__slide">
+                    <div class="slide" style="background-image:url(images/content/main/slider/img.jpg)">
+                      <div class="container slide__container">
+                        <div class="slide__title">наружная реклама<br>на вашей улице</div><a class="slide__link button">
+                          <div class="button__title">Типы конструкций</div></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slider__slide">
+                    <div class="slide" style="background-image:url(images/content/main/slider/img.jpg)">
+                      <div class="container slide__container">
+                        <div class="slide__title">наружная реклама<br>на вашей улице</div><a class="slide__link button">
+                          <div class="button__title">Типы конструкций</div></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slider__slide">
+                    <div class="slide" style="background-image:url(images/content/main/slider/img.jpg)">
+                      <div class="container slide__container">
+                        <div class="slide__title">наружная реклама<br>на вашей улице</div><a class="slide__link button">
+                          <div class="button__title">Типы конструкций</div></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slider__slide">
+                    <div class="slide" style="background-image:url(images/content/main/slider/img.jpg)">
+                      <div class="container slide__container">
+                        <div class="slide__title">наружная реклама<br>на вашей улице</div><a class="slide__link button">
+                          <div class="button__title">Типы конструкций</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination slider__pag"></div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
       <footer class="footer"></footer>
     </div>
@@ -54,5 +139,5 @@
     </div>
   </div>
   <script src="js/vendor.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </html>

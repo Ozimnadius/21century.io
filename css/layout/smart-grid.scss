@@ -18,14 +18,14 @@ $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
-$fields: 30px;
+$fields: 15px;
 $fields_lg: 15px;
 $fields_md: 15px;
 $fields_sm: 15px;
 $fields_xs: 15px;
-$containerWidth_lg: 990px;
-$containerWidth_md: 750px;
-$containerWidth_sm: 570px;
+$containerWidth_lg: 930px;
+$containerWidth_md: 690px;
+$containerWidth_sm: 510px;
 $containerWidth_xs: 100%;
 
 @mixin wrapper-full(){

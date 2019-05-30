@@ -1,0 +1,22 @@
+.main {
+
+}
+
+.slider {
+
+
+}
+
+.slide {
+  height: 880px;
+  background-size: cover;
+  background-position: center center;
+
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
