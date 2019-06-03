@@ -20,3 +20,126 @@
   text-transform: uppercase;
   letter-spacing: 1.44px;
 }
+
+.arrow {
+  width: 41px;
+  height: 41px;
+  background-color: $bg;
+  background-image: linear-gradient(-45deg, $blue2 0%, $blue 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__svg {
+    width: 12px;
+    height: 16px;
+    fill: $bg;
+  }
+}
+
+.link {
+  color: $blue;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social{
+  margin-right: 43px;
+  transition: .3s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &__svg {
+    width: 15px;
+    height: 15px;
+    fill: $bg;
+  }
+}
+
+.contact {
+
+  display: flex;
+  align-items: center;
+
+  &_footer{
+    .contact {
+      &__title {
+        color: $text;
+      }
+    }
+  }
+
+  &__svg {
+    width: 13px;
+    height: 13px;
+    fill:$blue;
+    margin-right: 10px;
+  }
+
+  &__title {
+    color: $bg;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+  }
+
+}
+
+.logo {
+  width: 171px;
+  height: 56px;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    transition: .3s;
+
+
+    &:hover,&.active {
+      color: $blue;
+    }
+  }
+}
+
+.bread {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 25px 0;
+
+
+  &__item {
+    color: rgba($text,.7);
+    font-size: 12px;
+    letter-spacing: 0.72px;
+  }
+
+  &__seporator {
+    width: 5px;
+    height: 5px;
+    background-image: linear-gradient(-45deg, $blue 0%, $blue2 100%);
+    margin: 0 20px;
+  }
+}

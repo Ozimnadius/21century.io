@@ -21,6 +21,14 @@
     margin-bottom: 80px;
   }
 
+  &__news {
+    margin-bottom: 80px;
+  }
+
+  &__about {
+
+  }
+
 }
 
 .slider {
@@ -106,14 +114,6 @@
     letter-spacing: 1.44px;
   }
 
-  &__link {
-    color: $blue;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-  }
-
   &__container {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -124,10 +124,15 @@
   }
 
   &__slide {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     background-color: $bg;
     display: block;
     padding-bottom: 40px;
+    transition: .3s;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
     &-img {
       padding: 40px 60px;
@@ -188,22 +193,6 @@
 
   &__next {
     right: 0;
-  }
-
-  &__button {
-    width: 41px;
-    height: 41px;
-    background-color: $bg;
-    background-image: linear-gradient(-45deg, $blue2 0%, $blue 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &-svg {
-      width: 12px;
-      height: 16px;
-      fill: $bg;
-    }
   }
 }
 
@@ -356,5 +345,145 @@
 
   &__title {
     margin-bottom: 30px;
+  }
+}
+
+.mnews{
+
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+
+  &__switches {
+    display: flex;
+    align-items: center;
+  }
+
+  &__switch {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-right: 40px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      color: $blue;
+    }
+  }
+
+  &__tabs {
+    position: relative;
+  }
+
+  &__tab {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+
+    &.active {
+      visibility: visible;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__prev, &__next {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    margin-top: -20px;
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__slide {
+    border: 1px solid $white4;
+    padding: 20px;
+    padding-bottom: 25px;
+
+    &-img {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-pic {
+      display: block;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: lh(12px,24px);
+      text-transform: uppercase;
+      letter-spacing: 0.72px;
+      margin-bottom: 10px;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__date {
+    display: flex;
+    font-size: 10px;
+
+    &-title {
+      font-weight: 700;
+      margin-right: 15px;
+    }
+
+    &-date {
+      font-weight: 900;
+      color: $blue;
+    }
+  }
+
+}
+
+.mabout {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background: url("/images/bg/mabout.jpg") center 0;
+  background-size: cover;
+
+  &__wrap {
+    @include col;
+    @include size(12);
+    @include shift-left(12);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
   }
 }

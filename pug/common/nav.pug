@@ -1,0 +1,6 @@
+include _mixins
+include _settings
+
+.nav
+    each i in nav
+        a(href=i.link class=i.dopClass).nav__item= i.title

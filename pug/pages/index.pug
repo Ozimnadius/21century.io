@@ -16,9 +16,9 @@ block content
                                 div(style='background-image:url(images/content/main/slider/img.jpg)').slide
                                     .container.slide__container
                                         .slide__title
-                                            |наружная реклама
+                                            | наружная реклама
                                             br
-                                            |на вашей улице
+                                            | на вашей улице
                                         a(href='/').slide__link.button
                                             .button__title Типы конструкций
                     // -pagination
@@ -33,7 +33,7 @@ block content
                     //- top
                     .types__top
                         .types__title.title Типы конструкций
-                        a(href='/').types__link Все конструкции
+                        a(href='/').types__link.link Все конструкции
 
                     //- slider
                     .types__slider
@@ -43,7 +43,7 @@ block content
                                     .swiper-slide
                                         a(href='/').types__slide
                                             .types__slide-img
-                                                img(src='images/content/main/types/'+(x+1)+'.png').types__slide-pic
+                                                img(src='images/content/main/types/' + (x + 1) + '.png').types__slide-pic
                                             .types__slide-desc
                                                 .types__slide-title= i.title
                                                 .types__slide-size
@@ -53,10 +53,10 @@ block content
 
 
                             //- nav
-                            button(type=button).types__prev.types__button
-                                +icon('left', 'types__button-svg')
-                            button(type=button).types__next.types__button
-                                +icon('right', 'types__button-svg')
+                            button(type=button).types__prev.arrow
+                                +icon('left', 'arrow__svg')
+                            button(type=button).types__next.arrow
+                                +icon('right', 'arrow__svg')
         //- popular
         section.main__popular
             .container
@@ -87,10 +87,10 @@ block content
                                         td.table__w5.table__item-side А
                                         td.table__w6.table__item-months
                                             .table__item-month
-                                                |Май:&nbsp;
+                                                | Май:&nbsp;
                                                 span.table__item-month_false Занято
                                             .table__item-month
-                                                |Июнь:&nbsp;
+                                                | Июнь:&nbsp;
                                                 span.table__item-month_true Свободно
                                         td.table__w7.table__item-price 15 000 руб./ мес.
                                         td.table__w8.table__item-order Заказать
@@ -111,12 +111,81 @@ block content
         section.main__news
             .mnews
                 .container
-                    .mnews__container
+                    .mnews__top
+                        //- title
+                        .mnews__title.title  Новости компании
+
                         //- switches
                         .mnews__switches
-                            .mnews__switch.active Новости компании
-                            .mnews__switch Новости рынка
-                        //- tabs
+                            div(data-id=1).mnews__switch.active Новости компании
+                            div(data-id=2).mnews__switch Новости рынка
+
+
+                    //- tabs
+                    .mnews__tabs
+                        div(data-id=1).mnews__tab.active
+                            .mnews__slider
+                                .swiper-container.mnews__container
+                                    .swiper-wrapper.mnews__wrapper
+                                        each i,x in [1,2,1,2,1,2]
+                                            .swiper-slide
+                                                .mnews__slide
+                                                    .mnews__slide-img
+                                                        img(src='images/content/main/mnews/' + i + '.jpg').mnews__slide-pic
+                                                    .mnews__slide-title Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.
+                                                    .mnews__slide-bottom
+                                                        .mnews__date
+                                                            .mnews__date-title Опубликовано:
+                                                            .mnews__date-date 29.05.2019
+                                                        a(href='/').mnews__link.link Читать далее
+                                //- nav
+                                button(type=button).mnews__prev.arrow
+                                    +icon('left', 'arrow__svg')
+                                button(type=button).mnews__next.arrow
+                                    +icon('right', 'arrow__svg')
+
+
+                        div(data-id=2).mnews__tab
+                            .mnews__slider
+                                .swiper-container.mnews__container
+                                    .swiper-wrapper.mnews__wrapper
+                                        each i,x in [1,2,1,2,1,2]
+                                            .swiper-slide
+                                                .mnews__slide
+                                                    .mnews__slide-img
+                                                        img(src='images/content/main/mnews/' + i + '.jpg').mnews__slide-pic
+                                                    .mnews__slide-title 2Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.
+                                                    .mnews__slide-bottom
+                                                        .mnews__date
+                                                            .mnews__date-title Опубликовано:
+                                                            .mnews__date-date 29.05.2019
+                                                        a(href='/').mnews__link.link Читать далее
+                                //- nav
+                                button(type=button).mnews__prev.arrow
+                                    +icon('left', 'arrow__svg')
+                                button(type=button).mnews__next.arrow
+                                    +icon('right', 'arrow__svg')
+        //- about
+        section.main__about
+            .mabout
+                .container
+                    .row
+                        .mabout__wrap
+                            .mabout__top
+                                .mabout__title.title О компании 21 Век
+                                a(href='').mabout__link.link Подробнее
+                            .mabout__content
+                                .content
+                                    p Компания «21 век» была основана в 1999 году. Сфера ее деятельности – оказание услуг по производству и размещению наружной рекламы. За годы существования агентство сумело занять прочные позиции в Москве и Московской области, и сегодня продолжает свое активное развитие, благодаря запуску новых продуктов в различных сегментах рынка наружной рекламы.
+                                    h3 Основные принципы работы
+                                    ul
+                                        li Эффективность;
+                                        li Надежность;
+                                        li Профессионализм;
+                                        li Высокое качество обслуживания;
+                                        li Инновационность;
+                                        li Ориентация на нужды клиентов;
+
 
 
 

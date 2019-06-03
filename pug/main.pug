@@ -45,20 +45,86 @@ html(lang="ru")
                         .row.header__bottom-row
                             //- logo
                             .header__logo
-                                a(href='/').logo
-                                    img(src='images/content/logo.svg').logo__img
+                                include common/logo
 
                             //- nav
                             .header__nav
-                                .nav
-                                    each i in nav
-                                        a(href=i.link class=i.dopClass).nav__item= i.title
+                                include common/nav
             //- pages
             .page
                 block content
 
             //- footer
             footer.footer
+                .footer__top
+                    .container
+                        .row.footer__top-row
+                            .footer__logo
+                                include common/logo
+                            .footer__nav
+                                include common/nav
+
+
+                .footer__middle
+                    .container
+                        .row
+                            .footer__left
+                                .footer__contacts
+                                    each i in headerContacts
+                                        .footer__contact
+                                            a(href=i.href).contact.contact_footer
+                                                +icon(i.svg, 'contact__svg')
+                                                .contact__title= i.title
+                                .footer__contacts
+                                    .footer__contact
+                                        a(href='/').contact.contact_footer
+                                            +icon('pin', 'contact__svg')
+                                            .contact__title г. Москва, ул. Пятницкая, д. 25, стр. 1
+
+                                .footer__socials
+                                    include common/socials
+
+                            .footer__right
+                                .footer__menu
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Цифровой суперсайт
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Суперсайт
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Магистральный щит
+                                .footer__menu
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Цифровой суперсайт
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Суперсайт
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Магистральный щит
+                                .footer__menu
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Цифровой суперсайт
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Суперсайт
+                                    a(href='/').footer__item
+                                        +icon('hexagon', 'footer__item-svg')
+                                        .footer__item-title Магистральный щит
+
+
+
+
+                .footer__bottom
+                    .container.footer__bottom-row
+                        .footer__copy © Рекламное агенство «21век», 2019
+                        a(href='/').footer__policy Политика конфиденциальности
+
+
 
     .debug
         div

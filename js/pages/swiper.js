@@ -30,5 +30,23 @@ window.onload = function () {
         },
     });
 
+    let swiperMnews= new Swiper('.mnews__container', {
+        direction: 'horizontal',
+        loop: true,
+        speed: 500,
+        slidesPerView: 2,
+        grabCursor: true,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.mnews__next',
+            prevEl: '.mnews__prev',
+        },
+        on:{
+            init: function () {
+                $('.mnews__tabs').css('height', $(this.wrapperEl).outerHeight());
+            }
+        }
+    });
+
 
 };

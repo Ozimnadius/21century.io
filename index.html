@@ -55,7 +55,8 @@
         <div class="header__bottom">
           <div class="container">
             <div class="row header__bottom-row">
-              <div class="header__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a></div>
+              <div class="header__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a>
+              </div>
               <div class="header__nav">
                 <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="/">О компании</a><a class="nav__item" href="/">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="/">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="/">контакты</a>
                 </div>
@@ -117,7 +118,7 @@
             <div class="types">
               <div class="container">
                 <div class="types__top">
-                  <div class="types__title title">Типы конструкций</div><a class="types__link" href="/">Все конструкции</a>
+                  <div class="types__title title">Типы конструкций</div><a class="types__link link" href="/">Все конструкции</a>
                 </div>
                 <div class="types__slider">
                   <div class="swiper-container types__container">
@@ -211,13 +212,13 @@
                             </div>
                           </div></a></div>
                     </div>
-                    <button class="types__prev types__button">
-                                      <svg class="types__button-svg">
+                    <button class="types__prev arrow">
+                                      <svg class="arrow__svg">
                                         <use xlink:href="/images/icons/sprite.svg#left"></use>
                                       </svg>
                     </button>
-                    <button class="types__next types__button">
-                                      <svg class="types__button-svg">
+                    <button class="types__next arrow">
+                                      <svg class="arrow__svg">
                                         <use xlink:href="/images/icons/sprite.svg#right"></use>
                                       </svg>
                     </button>
@@ -342,10 +343,220 @@
           <section class="main__news">
             <div class="mnews">
               <div class="container">
-                <div class="mnews__container">
+                <div class="mnews__top">
+                  <div class="mnews__title title"> Новости компании</div>
                   <div class="mnews__switches">
-                    <div class="mnews__switch active">Новости компании</div>
-                    <div class="mnews__switch">Новости рынка</div>
+                    <div class="mnews__switch active" data-id="1">Новости компании</div>
+                    <div class="mnews__switch" data-id="2">Новости рынка</div>
+                  </div>
+                </div>
+                <div class="mnews__tabs">
+                  <div class="mnews__tab active" data-id="1">
+                    <div class="mnews__slider">
+                      <div class="swiper-container mnews__container">
+                        <div class="swiper-wrapper mnews__wrapper">
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/1.jpg"></div>
+                              <div class="mnews__slide-title">Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/2.jpg"></div>
+                              <div class="mnews__slide-title">Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/1.jpg"></div>
+                              <div class="mnews__slide-title">Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/2.jpg"></div>
+                              <div class="mnews__slide-title">Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/1.jpg"></div>
+                              <div class="mnews__slide-title">Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/2.jpg"></div>
+                              <div class="mnews__slide-title">Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="mnews__prev arrow">
+                                        <svg class="arrow__svg">
+                                          <use xlink:href="/images/icons/sprite.svg#left"></use>
+                                        </svg>
+                      </button>
+                      <button class="mnews__next arrow">
+                                        <svg class="arrow__svg">
+                                          <use xlink:href="/images/icons/sprite.svg#right"></use>
+                                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mnews__tab" data-id="2">
+                    <div class="mnews__slider">
+                      <div class="swiper-container mnews__container">
+                        <div class="swiper-wrapper mnews__wrapper">
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/1.jpg"></div>
+                              <div class="mnews__slide-title">2Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/2.jpg"></div>
+                              <div class="mnews__slide-title">2Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/1.jpg"></div>
+                              <div class="mnews__slide-title">2Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/2.jpg"></div>
+                              <div class="mnews__slide-title">2Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/1.jpg"></div>
+                              <div class="mnews__slide-title">2Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="mnews__slide">
+                              <div class="mnews__slide-img"><img class="mnews__slide-pic" src="images/content/main/mnews/2.jpg"></div>
+                              <div class="mnews__slide-title">2Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.</div>
+                              <div class="mnews__slide-bottom">
+                                <div class="mnews__date">
+                                  <div class="mnews__date-title">Опубликовано:</div>
+                                  <div class="mnews__date-date">29.05.2019</div>
+                                </div><a class="mnews__link link" href="/">Читать далее</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="mnews__prev arrow">
+                                        <svg class="arrow__svg">
+                                          <use xlink:href="/images/icons/sprite.svg#left"></use>
+                                        </svg>
+                      </button>
+                      <button class="mnews__next arrow">
+                                        <svg class="arrow__svg">
+                                          <use xlink:href="/images/icons/sprite.svg#right"></use>
+                                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="main__about">
+            <div class="mabout">
+              <div class="container">
+                <div class="row">
+                  <div class="mabout__wrap">
+                    <div class="mabout__top">
+                      <div class="mabout__title title">О компании 21 Век</div><a class="mabout__link link" href="">Подробнее</a>
+                    </div>
+                    <div class="mabout__content">
+                      <div class="content">
+                        <p>Компания «21 век» была основана в 1999 году. Сфера ее деятельности – оказание услуг по производству и размещению наружной рекламы. За годы существования агентство сумело занять прочные позиции в Москве и Московской области, и сегодня продолжает свое активное развитие, благодаря запуску новых продуктов в различных сегментах рынка наружной рекламы.</p>
+                        <h3>Основные принципы работы</h3>
+                        <ul>
+                          <li>Эффективность;</li>
+                          <li>Надежность;</li>
+                          <li>Профессионализм;</li>
+                          <li>Высокое качество обслуживания;</li>
+                          <li>Инновационность;</li>
+                          <li>Ориентация на нужды клиентов;</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -353,7 +564,109 @@
           </section>
         </main>
       </div>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="row footer__top-row">
+              <div class="footer__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a>
+              </div>
+              <div class="footer__nav">
+                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="/">О компании</a><a class="nav__item" href="/">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="/">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="/">контакты</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__middle">
+          <div class="container">
+            <div class="row">
+              <div class="footer__left">
+                <div class="footer__contacts">
+                  <div class="footer__contact"><a class="contact contact_footer" href="tel:+7(495)6603790">
+                                      <svg class="contact__svg">
+                                        <use xlink:href="/images/icons/sprite.svg#phone"></use>
+                                      </svg>
+                      <div class="contact__title">+7 495 660 37 90</div></a></div>
+                  <div class="footer__contact"><a class="contact contact_footer" href="mailto:+7(495)6603790">
+                                      <svg class="contact__svg">
+                                        <use xlink:href="/images/icons/sprite.svg#email"></use>
+                                      </svg>
+                      <div class="contact__title">info@21vek.ru</div></a></div>
+                </div>
+                <div class="footer__contacts">
+                  <div class="footer__contact"><a class="contact contact_footer" href="/">
+                                      <svg class="contact__svg">
+                                        <use xlink:href="/images/icons/sprite.svg#pin"></use>
+                                      </svg>
+                      <div class="contact__title">г. Москва, ул. Пятницкая, д. 25, стр. 1</div></a></div>
+                </div>
+                <div class="footer__socials">
+                  <div class="socials"><a class="social" href="/">
+                                        <svg class="social__svg">
+                                          <use xlink:href="/images/icons/sprite.svg#yt"></use>
+                                        </svg></a><a class="social" href="/">
+                                        <svg class="social__svg">
+                                          <use xlink:href="/images/icons/sprite.svg#vk"></use>
+                                        </svg></a><a class="social" href="/">
+                                        <svg class="social__svg">
+                                          <use xlink:href="/images/icons/sprite.svg#insta"></use>
+                                        </svg></a><a class="social" href="/">
+                                        <svg class="social__svg">
+                                          <use xlink:href="/images/icons/sprite.svg#fb"></use>
+                                        </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__right">
+                <div class="footer__menu"><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Цифровой суперсайт</div></a><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Суперсайт</div></a><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Магистральный щит</div></a></div>
+                <div class="footer__menu"><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Цифровой суперсайт</div></a><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Суперсайт</div></a><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Магистральный щит</div></a></div>
+                <div class="footer__menu"><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Цифровой суперсайт</div></a><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Суперсайт</div></a><a class="footer__item" href="/">
+                                      <svg class="footer__item-svg">
+                                        <use xlink:href="/images/icons/sprite.svg#hexagon"></use>
+                                      </svg>
+                    <div class="footer__item-title">Магистральный щит</div></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container footer__bottom-row">
+            <div class="footer__copy">© Рекламное агенство «21век», 2019</div><a class="footer__policy" href="/">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
   <div class="debug">

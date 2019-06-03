@@ -5,6 +5,18 @@
   right: 0;
   z-index: 100;
 
+  &_second {
+    position: relative;
+    background-color: $white2;
+    border-bottom: 1px solid rgba($black-light,.1);
+
+    .header {
+      &__bottom {
+        padding: 15px 0;
+      }
+    }
+  }
+
   &__top {
     background-color: $text;
     padding: 16px 0;
@@ -48,71 +60,3 @@
   }
 }
 
-.socials {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.social{
-  margin-right: 43px;
-  transition: .3s;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &:hover {
-    opacity: .7;
-  }
-
-  &__svg {
-    width: 15px;
-    height: 15px;
-    fill: $bg;
-  }
-}
-
-.contact {
-
-  display: flex;
-  align-items: center;
-
-  &__svg {
-    width: 13px;
-    height: 13px;
-    fill:$blue;
-    margin-right: 10px;
-  }
-
-  &__title {
-    color: $bg;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.72px;
-  }
-}
-
-.logo {
-  width: 171px;
-  height: 56px;
-  display: block;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &__item {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    transition: .3s;
-
-
-    &:hover,&.active {
-      color: $blue;
-    }
-  }
-}

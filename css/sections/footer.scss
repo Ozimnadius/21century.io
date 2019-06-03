@@ -1,3 +1,104 @@
 .footer {
+  background-color: $white2;
+
+  &__top {
+    padding: 15px 0;
+    border-top: 1px solid rgba($black-light,.1);
+    border-bottom: 1px solid rgba($black-light,.1);
+    margin-bottom: 55px;
+    &-row {
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    @include col;
+    @include size(8);
+  }
+
+  &__nav {
+    @include col;
+    @include size(16);
+  }
+
+  &__middle {
+    margin-bottom: 55px;
+  }
+
+  &__left {
+    @include col;
+    @include size(8);
+  }
+
+  &__right {
+    @include col;
+    @include size(16);
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__contact {
+    margin-right: 65px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .social {
+    &__svg {
+      fill: $blue;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    padding-right: 60px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-svg {
+      width: 10px;
+      height: 10px;
+      fill: $blue ;
+      margin-right: 20px;
+    }
+  }
+
+  &__bottom {
+    background-color: $text;
+    padding: 18px 0;
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__copy {
+    color: rgba($bg,.2);
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &__policy {
+    color: rgba($bg,.2);
+    font-size: 12px;
+  }
 
 }

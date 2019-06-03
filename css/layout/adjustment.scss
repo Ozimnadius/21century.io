@@ -35,7 +35,7 @@ body {
   overflow: hidden;
 }
 
-.main {
+.page {
   flex-grow: 1;
 }
 
@@ -69,4 +69,10 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+ul,ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

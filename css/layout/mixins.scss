@@ -22,10 +22,33 @@ $vh: 1080;
 
 @mixin content() {
   ul {
-    margin: 1em 0;
-    padding-left: 40px;
+    margin-bottom: 35px;
+    letter-spacing: 0.9px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
     li {
-      list-style: disc;
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 17px;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 11px;
+        height: 11px;
+        background: url("/images/content/hexagon.svg") center center;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -36,7 +59,11 @@ $vh: 1080;
     margin: 0.83em 0;
   }
   h3 {
-    margin: 1em 0;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
   }
   h4 {
     margin: 1.33em 0;
@@ -48,7 +75,13 @@ $vh: 1080;
     margin: 2.33em 0;
   }
   p {
-    margin: 1em 0;
+    margin-bottom: 25px;
+    line-height: lh(15px,33px);
+    letter-spacing: 0.9px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }
 
