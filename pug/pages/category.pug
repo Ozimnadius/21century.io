@@ -1,0 +1,74 @@
+extends ../main
+
+block variables
+    - var title = 'Цифровые суперсайты'
+    - var headerDopClass = 'header_second'
+
+block content
+    .container
+        .bread
+            a(href='/').bread__item Главная
+            .bread__seporator
+            a(href='catalog.html').bread__item Типы конструкций
+            .bread__seporator
+            a.bread__item Цифровые суперсайты
+
+        main.cat
+            //- main
+            section.cat__main
+                //- title
+                .cat__title.title Цифровые суперсайты
+                //- desc
+                .cat__desc
+                    .row
+                        //- left
+                        .cat__left
+                            .cat__img
+                                img(src='images/content/category/img.png').cat__pic
+
+                        //- right
+                        .cat__right
+                            .cat__content
+                                .content
+                                    p Таксофонная кабина программы «Народный телефон» – это современная городская мебель, предоставляющая БЕСПЛАТНУЮ местную и междугороднюю связь, с возможностью размещения на ней рекламного изображения сити-формата (1,2 х 1,8).
+                                    p ТК имеет четыре поверхности для размещения справочно-информационных материалов (СИМ) – две внешние и две внутренние.
+                                    h3 Преимущества:
+                                    ul
+                                        li Предоставляет современные услуги связи;
+                                        li Стильный и современный дизайн;
+                                        li Установка в местах повышенного скопления людей;
+                                        li Информирование клиента по средствам короткого номера;
+                                        li Мониторинг не менее 2-х раз в неделю.
+
+
+                //- map
+                .cat__map
+                    .cat__map-title Местоположение на карте:
+                    .cat__map-map
+                        img(src='images/content/category/catMap.jpg')
+                    .cat__map-list
+                        +list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'table_white2')
+                    .cat__map-bottom
+                        .cat__map-pages Всего статей:&nbsp;
+                            span.cat__map-pages_blue 236
+                        .cat__map-pag
+                            .pag
+                                a(href='category.html').pag__item.active 1
+                                each i in [2,3,4,5,'...',23]
+                                    a(href='category.html').pag__item=i
+                                a(href='category.html').pag__item.pag__item_all Все
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

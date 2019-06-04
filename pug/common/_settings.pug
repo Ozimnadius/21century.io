@@ -38,11 +38,11 @@
             dopClass: 'active'
         },
         {
-            link: '/',
+            link: 'about.html',
             title: 'О компании'
         },
         {
-            link: '/',
+            link: 'catalog.html',
             title: 'Типы конструкций'
         },
         {
@@ -58,7 +58,7 @@
             title: 'Документы'
         },
         {
-            link: '/',
+            link: 'contacts.html',
             title: 'контакты'
         },
 
@@ -98,5 +98,72 @@
         {
             title: 'ЦифровЫЕ ситибордЫ',
             size: '2.7 х 3.7 м'
+        }
+    ]
+-
+    var productList = [
+        {
+            name: 'Статус:',
+            value: 'Занято',
+            dopClass: 'product__item-value_red'
+        },
+        {
+            name: 'Статус:',
+            value: 'Свободно',
+            dopClass: 'product__item-value_green'
+        },
+
+        {
+            name: 'Сторона:',
+            value: 'А',
+        },
+        {
+            name: 'Высота (м):',
+            value: '8',
+        },
+        {
+            name: 'Формат (м):',
+            value: '3 х 6',
+        },
+        {
+            name: 'Наличие подсветки:',
+            value: 'Нет',
+        },
+        {
+            name: 'Координаты:',
+            value: '55.771583 / 37.96115',
+        },
+        {
+            name: 'Направление:',
+            value: 'в Москву',
+        },
+        {
+            name: 'Инвентарный номер::',
+            value: '624',
+        }
+    ]
+-
+    var contacts = [
+        {
+            title: 'Центральный офис',
+            list: {
+                'Адрес:': '115326, г. Москва, ул. Пятницкая, д. 25, стр. 1 (здание "Россия сегодня")',
+                'Телефон / Факс:': '+7 (495) 660-37-90',
+                'E-mail:': 'info@21vektv.ru'
+            },
+            mapId: 'mapOffice',
+            socials: true,
+            docs: false
+        },
+        {
+            title: 'Склад',
+            list: {
+                'Адрес:': 'Ул. Народного Ополчения улица д.43, корп.2 стр 5. (ст м Октябрьское поле, первый вагон из центра).',
+                'Телефон / Факс:': '+7 (495) 215-18-90',
+                'E-mail:': 'Пн-Пт с 11.00 до 20.00'
+            },
+            mapId: 'mapStore',
+            socials: false,
+            docs: true
         }
     ]

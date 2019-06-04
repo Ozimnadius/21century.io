@@ -1,0 +1,83 @@
+extends ../main
+
+block variables
+    - var title = 'г. Балашиха, проспект Ленина, напротив д.53 (Справа)'
+    - var headerDopClass = 'header_second'
+
+block content
+    .container
+        .bread
+            a(href='/').bread__item Главная
+            .bread__seporator
+            a(href='catalog.html').bread__item Типы конструкций
+            .bread__seporator
+            a.bread__item г. Балашиха, проспект Ленина, напротив д.53 (Справа)
+
+        main.product
+            //- main
+            section.product__main
+                //- title
+                .product__title.title г. Балашиха, проспект Ленина, напротив д.53 (Справа)
+                //- desc
+                .product__desc
+                    .row.product__desc-row
+                        //- left
+                        .product__left
+                            .product__img
+                                img(src='images/content/product/product.jpg').product__pic
+                        //- right
+                        .product__right
+                            //- title
+                            .product__info Подробная информация:
+                            //- list
+                            .product__list
+                                each i in productList
+                                    .product__item
+                                        .product__item-name=i.name
+                                        div(class=i.dopClass).product__item-value=i.value
+
+
+
+                            //- price
+                            .product__price
+                                span.product__price-name Стоимость:
+                                span.product__price-price 15 000
+                                span.product__price-cur Руб./мес.
+                            //- buttons
+                            .product__buttons
+                                button(type='button').product__button.button2
+                                    .button2__title Уточнить у менеджера
+                                button(type='button').product__button.button
+                                    .button__title Заказать размещение
+                //- map
+                .product__map
+                    .product__map-title Местоположение на карте:
+                    .product__map-map
+                        img(src='images/content/product/productMap.jpg')
+                //- recom
+                .product__recom
+                    .product__recom-title Рекомендуемые вам:
+                    .product__recom-list
+                        +list([1, 2, 3], 'table_white2')
+
+                //- content
+                .product__content
+                    .content
+                        p Наверное, никто из рекламодателей не сомневается в том, что срок воздействия рекламы на клиентов очень недолог. Вот они увидели ваше объявление, захотели купить рекламируемый товар. Направились в сторону вашего магазина, и тут, на их пути возникают новые предложения, новые торговые точки, в которых продаются еще более привлекательные товары. Как сделать так, чтобы продлить период действия вашей рекламы? И что можно придумать для того, чтобы ваши потенциальные клиенты не передумали и не обратились к вашим конкурентам?
+                        p Во-первых, очень важно создание такого предложения, от которого невозможно отказаться. Пусть ваши товары или услуги стоят хоть немного меньше, чем в конкурирующих компаниях. Или у вас будут скидки. Либо вы предложите лучший сервис.
+                        p Во-вторых, необходимо, чтобы у вашей компании был высокий авторитет. Создавайте свой собственный бренд, вкладывайте в его продвижение, придавая тем самым больший вес своей продукции. Именно в этом случае ваши товары будут раскупаться в первую очередь. Хорошо раскрученный бренд – это как любовь. В этом случае, все остальные становятся неинтересными и ненужными. И ваши покупатели, хоть и могут изменить, попробовать нечто новенькое, но все равно вернутся к вам.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

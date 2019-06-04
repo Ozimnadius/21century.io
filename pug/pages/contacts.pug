@@ -1,0 +1,76 @@
+extends ../main
+
+block variables
+    - var title = 'Контакты'
+    - var headerDopClass = 'header_second'
+
+block content
+    .container
+        .bread
+            a(href='/').bread__item Главная
+            .bread__seporator
+            a.bread__item Контакты
+
+        main.contacts
+            //- main
+            section.contacts__main
+                //- title
+                .contacts__title.title Контакты
+                //- list
+                .contacts__list
+                    each i in contacts
+                        .contacts__item
+                            .cont
+                                //- left
+                                .cont__left
+                                    .cont__title=i.title
+                                    .cont__list
+                                        each j,x in i.list
+                                            .cont__item
+                                                .cont__item-name=x
+                                                .cont__item-val=j
+                                        if i.socials
+                                            .cont__item
+                                                .cont__item-name Соц. сети:
+                                                .cont__item-socials
+                                                    .socials
+                                                        each val in socials
+                                                            a(href= val.link).social.social_blue
+                                                                +icon(val.svg, 'social__svg')
+                                        else if i.docs
+                                            .cont__item
+                                                .cont__item-name Документы:
+                                                .cont__item-docs
+                                                    a(href='/' download=true).cont__item-doc Накладная на передачу
+                                                    a(href='/' download=true).cont__item-doc Все технические требования к рекламно-информационным материалам.
+                                    if i.socials
+                                        .cont__button
+                                            button(type='button').button.cont__button-button
+                                                .button__title Заказать звонок
+                                //- right
+                                .cont__right
+                                    div(id=i.mapId).cont__map
+                //- content
+                .contacts__content
+                    .content
+                        p Все интересующие вас вопросы, а также жалобы, рекомендации или пожелания по работе компании «XXI век»  вы можете адресовать лично генеральному директору, используя форму обратной связи. Не забудьте оставить свои контактные данные, e-mail и телефон.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

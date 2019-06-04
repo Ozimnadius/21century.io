@@ -1,0 +1,24 @@
+.about {
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    margin-bottom: 40px;
+    h3 {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 5px;
+        height: 5px;
+        background-image: linear-gradient(to top, $orange2 0%, $orange 100%);
+      }
+    }
+  }
+}

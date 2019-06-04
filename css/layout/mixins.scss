@@ -58,16 +58,21 @@ $vh: 1080;
   h2 {
     margin: 0.83em 0;
   }
-  h3 {
+
+  h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+
+  h4 {
     margin-bottom: 15px;
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.72px;
   }
-  h4 {
-    margin: 1.33em 0;
-  }
+
   h5 {
     margin: 1.67em 0;
   }

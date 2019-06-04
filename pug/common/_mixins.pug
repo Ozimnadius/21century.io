@@ -4,3 +4,38 @@ mixin icon(iconName, iconClass)
 
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin list(count, dopClass)
+  table(class=dopClass).table
+    thead
+      tr
+        th.table__w1
+        th.table__w2 Фото
+        th.table__w3 Адрес расположения
+        th.table__w4 Формат
+        th.table__w5 Сторона
+        th.table__w6 Статус
+        th.table__w7 Стоимость, мес
+        th.table__w8
+    tbody
+      each i in count
+        tr.table__item
+          td.table__w1.table__item-num= i
+          td.table__w2
+            .table__item-img
+              img(src='images/content/main/popular/img.jpg').table__item-pic
+          td.table__w3.table__item-addr
+            a(href='product.html') г. Балашиха, проспект Ленина, напротив д. 53 (Справа)
+          td.table__w4.table__item-size 3.0 х 6.0 м.
+          td.table__w5.table__item-side А
+          td.table__w6.table__item-months
+            .table__item-month
+              | Май:&nbsp;
+              span.table__item-month_false Занято
+            .table__item-month
+              | Июнь:&nbsp;
+              span.table__item-month_true Свободно
+          td.table__w7.table__item-price 15 000 руб./ мес.
+          td.table__w8.table__item-order Заказать
+      tr
+        td(colspan=8)
