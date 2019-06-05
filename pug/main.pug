@@ -125,7 +125,6 @@ html(lang="ru")
                         a(href='/').footer__policy Политика конфиденциальности
 
 
-
     .debug
         div
             div
@@ -149,6 +148,92 @@ html(lang="ru")
                 div
                 div
                 div
+
+
+
+
+    button(type='button').callback-button.jsCallback
+        +icon('tel', 'callback-button__svg')
+
+    .popup
+        .popup__wrapper
+
+    template#callback
+        .callback
+            form().callback__form.form
+                button(type='button').form__close Закрыть
+                .form__title Форма обратной связи
+                .form__subtitle
+                    | Заполните поля формы и нажмите «Заказать звонок»
+                    br
+                    | и наш менеджер свяжется с Вами в течени 30 минут.
+                .form__fields
+                    .form__row.row
+                        .form__field.form__field_2
+                            input(type='text' name='name' placeholder='Ваше имя').input
+                        .form__field
+                            input(type='tel' name='tel' placeholder='Телефон').input
+                        .form__field
+                            input(type='email' name='email' placeholder='Email').input
+                        .form__field.form__field_2
+                            textarea(name='message' placeholder='Сообщение').input.input_area
+                .form__fz
+                    .fz
+                        label.fz__label
+                            input(type='checkbox' name='fz' checked=true).fz__input
+                            .fz__fake
+                            .fz__desc
+                                .fz__title Я даю согласие на обработку персональных данных.
+                                a(href='/').fz__link Прочитать пользовательское соглашение.
+
+                .form__buttons
+                    button(type='submit').form__button.button
+                        .button__title Заказать звонок
+                input(type='hidden' name='action' value='callback')
+
+
+    template#callorder
+        .callorder
+            form().callback__form.form
+                button(type='button').form__close Закрыть
+                .form__title Форма обратной связи
+                .form__subtitle
+                    | Заполните поля формы и нажмите «Заказать звонок»
+                    br
+                    | и наш менеджер свяжется с Вами в течени 30 минут.
+                .form__img
+                    img(src='images/content/forms/img.jpg').form__pic
+                .form__chars
+                    .form__char
+                        .form__char-name Инвентарный номер:
+                        .form__char-val.form__id 465
+                    .form__char
+                        .form__char-name Стоимость:
+                        .form__char-val.form__price 12 000 руб./мес
+                .form__fields
+                    .form__row.row
+                        .form__field.form__field_2
+                            input(type='text' name='name' placeholder='Ваше имя').input
+                        .form__field
+                            input(type='tel' name='tel' placeholder='Телефон').input
+                        .form__field
+                            input(type='email' name='email' placeholder='Email').input
+                        .form__field.form__field_2
+                            textarea(name='message' placeholder='Сообщение').input.input_area
+                .form__fz
+                    .fz
+                        label.fz__label
+                            input(type='checkbox' name='fz' checked=true).fz__input
+                            .fz__fake
+                            .fz__desc
+                                .fz__title Я даю согласие на обработку персональных данных.
+                                a(href='/').fz__link Прочитать пользовательское соглашение.
+
+                .form__buttons
+                    button(type='submit').form__button.button
+                        .button__title Заказать звонок
+                input(type='hidden' name='action' value='callorder')
+                input(type='hidden' name='id' value='465')
 
 
 

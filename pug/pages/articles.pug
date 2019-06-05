@@ -1,0 +1,64 @@
+extends ../main
+
+block variables
+    - var title = 'Статьи'
+    - var headerDopClass = 'header_second'
+
+block content
+    .container
+        .bread
+            a(href='/').bread__item Главная
+            .bread__seporator
+            a.bread__item Статьи
+
+        main.news
+            //- main
+            section.news__main
+                //- top
+                .news__top
+                    //- title
+                    .news__title.title Статьи
+                    //- pag
+                    .news__pag
+                        include ../common/pag
+
+
+                //- list
+                .news__list
+                    .row
+                        each i in [1,2,3,4,5,6,7,8]
+                            .news__item
+                                .news__item-img
+                                    img(src='images/content/news/' + i + '.jpg').news__item-pic
+                                .news__item-desc
+                                    .news__item-title Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.
+                                    .news__item-bottom
+                                        .news__date
+                                            .news__date-name Опубликовано:
+                                            .news__date-date 29.05.2019
+                                        a(href='article.html').news__item-more.link Читать далее
+
+
+                //- bottom
+                .news__bottom
+                    .news__pages Всего статей:&nbsp;
+                        span.news__pages_blue 236
+
+                    .news__pag
+                        include ../common/pag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

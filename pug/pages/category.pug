@@ -52,11 +52,7 @@ block content
                         .cat__map-pages Всего статей:&nbsp;
                             span.cat__map-pages_blue 236
                         .cat__map-pag
-                            .pag
-                                a(href='category.html').pag__item.active 1
-                                each i in [2,3,4,5,'...',23]
-                                    a(href='category.html').pag__item=i
-                                a(href='category.html').pag__item.pag__item_all Все
+                            include ../common/pag
 
 
 

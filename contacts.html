@@ -58,7 +58,7 @@
               <div class="header__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a>
               </div>
               <div class="header__nav">
-                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="/">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">контакты</a>
+                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="news.html">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">контакты</a>
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@
               <div class="footer__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a>
               </div>
               <div class="footer__nav">
-                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="/">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">контакты</a>
+                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="news.html">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">контакты</a>
                 </div>
               </div>
             </div>
@@ -291,6 +291,110 @@
       </div>
     </div>
   </div>
+  <button class="callback-button jsCallback" type="button">
+                      <svg class="callback-button__svg">
+                        <use xlink:href="/images/icons/sprite.svg#tel"></use>
+                      </svg>
+  </button>
+  <div class="popup">
+    <div class="popup__wrapper"></div>
+  </div>
+  <template id="callback">
+    <div class="callback">
+      <form class="callback__form form">
+        <button class="form__close" type="button">Закрыть</button>
+        <div class="form__title">Форма обратной связи</div>
+        <div class="form__subtitle">Заполните поля формы и нажмите «Заказать звонок»<br>и наш менеджер свяжется с Вами в течени 30 минут.</div>
+        <div class="form__fields">
+          <div class="form__row row">
+            <div class="form__field form__field_2">
+              <input class="input" type="text" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="form__field">
+              <input class="input" type="tel" name="tel" placeholder="Телефон">
+            </div>
+            <div class="form__field">
+              <input class="input" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form__field form__field_2">
+              <textarea class="input input_area" name="message" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form__fz">
+          <div class="fz">
+            <label class="fz__label">
+              <input class="fz__input" type="checkbox" name="fz" checked>
+              <div class="fz__fake"></div>
+              <div class="fz__desc">
+                <div class="fz__title">Я даю согласие на обработку персональных данных.</div><a class="fz__link" href="/">Прочитать пользовательское соглашение.</a>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="form__buttons">
+          <button class="form__button button" type="submit">
+            <div class="button__title">Заказать звонок</div>
+          </button>
+        </div>
+        <input type="hidden" name="action" value="callback">
+      </form>
+    </div>
+  </template>
+  <template id="callorder">
+    <div class="callorder">
+      <form class="callback__form form">
+        <button class="form__close" type="button">Закрыть</button>
+        <div class="form__title">Форма обратной связи</div>
+        <div class="form__subtitle">Заполните поля формы и нажмите «Заказать звонок»<br>и наш менеджер свяжется с Вами в течени 30 минут.</div>
+        <div class="form__img"><img class="form__pic" src="images/content/forms/img.jpg"></div>
+        <div class="form__chars">
+          <div class="form__char">
+            <div class="form__char-name">Инвентарный номер:</div>
+            <div class="form__char-val form__id">465</div>
+          </div>
+          <div class="form__char">
+            <div class="form__char-name">Стоимость:</div>
+            <div class="form__char-val form__price">12 000 руб./мес</div>
+          </div>
+        </div>
+        <div class="form__fields">
+          <div class="form__row row">
+            <div class="form__field form__field_2">
+              <input class="input" type="text" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="form__field">
+              <input class="input" type="tel" name="tel" placeholder="Телефон">
+            </div>
+            <div class="form__field">
+              <input class="input" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form__field form__field_2">
+              <textarea class="input input_area" name="message" placeholder="Сообщение"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form__fz">
+          <div class="fz">
+            <label class="fz__label">
+              <input class="fz__input" type="checkbox" name="fz" checked>
+              <div class="fz__fake"></div>
+              <div class="fz__desc">
+                <div class="fz__title">Я даю согласие на обработку персональных данных.</div><a class="fz__link" href="/">Прочитать пользовательское соглашение.</a>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="form__buttons">
+          <button class="form__button button" type="submit">
+            <div class="button__title">Заказать звонок</div>
+          </button>
+        </div>
+        <input type="hidden" name="action" value="callorder">
+        <input type="hidden" name="id" value="465">
+      </form>
+    </div>
+  </template>
   <script src="js/vendor.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/main.min.js"></script>

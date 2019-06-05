@@ -1,0 +1,91 @@
+extends ../main
+
+block variables
+    - var title = 'Народный телефон пришел в Солнечногорск'
+    - var headerDopClass = 'header_second'
+
+block content
+    .container
+        .bread
+            a(href='/').bread__item Главная
+            .bread__seporator
+            a(href='news.html').bread__item Новости
+            .bread__seporator
+            a.bread__item Народный телефон пришел в Солнечногорск
+
+        main.article
+            //- main
+            section.news__main
+                //- title
+                .article__title.title Народный телефон пришел в Солнечногорск
+                //- slider
+                .article__slider
+                    .swiper-container.article__container
+                        .swiper-wrapper.article__wrapper
+                            each i in [1,2,3,4]
+                                .swiper-slide
+                                    .article__slide
+                                        .article__slide-img
+                                            img(src='images/content/news/img.jpg').article__slide-pic
+                    //- nav
+                    button(type=button).article__prev.arrow
+                        +icon('left', 'arrow__svg')
+                    button(type=button).article__next.arrow
+                        +icon('right', 'arrow__svg')
+                //- content
+                .article__content
+                    .content
+                        p Наверное, никто из рекламодателей не сомневается в том, что срок воздействия рекламы на клиентов очень недолог. Вот они увидели ваше объявление, захотели купить рекламируемый товар. Направились в сторону вашего магазина, и тут, на их пути возникают новые предложения, новые торговые точки, в которых продаются еще более привлекательные товары. Как сделать так, чтобы продлить период действия вашей рекламы? И что можно придумать для того, чтобы ваши потенциальные клиенты не передумали и не обратились к вашим конкурентам?
+                        p Во-первых, очень важно создание такого предложения, от которого невозможно отказаться. Пусть ваши товары или услуги стоят хоть немного меньше, чем в конкурирующих компаниях. Или у вас будут скидки. Либо вы предложите лучший сервис.
+                        p Во-вторых, необходимо, чтобы у вашей компании был высокий авторитет. Создавайте свой собственный бренд, вкладывайте в его продвижение, придавая тем самым больший вес своей продукции. Именно в этом случае ваши товары будут раскупаться в первую очередь. Хорошо раскрученный бренд – это как любовь. В этом случае, все остальные становятся неинтересными и ненужными. И ваши покупатели, хоть и могут изменить, попробовать нечто новенькое, но все равно вернутся к вам.
+
+                //- bottom
+                .article__bottom
+                    .article__post
+                        .article__post-name Опубликовано:
+                        .article__post-val 29.05.2019
+                    .article__views
+                        .article__views-name Просмотрено:
+                        .article__views-val 123
+                    .article__buttons
+                        a(href='news-detail.html').article__button.button2
+                            .button2__title Предыдущая новость
+                        a(href='news-detail.html').article__button.button
+                            .button__title Следующая новость
+                //- same
+                .article__same
+                    .article__same-title Похожие новости
+                    .article__list
+                    .row
+                        each i in [1,2]
+                            .news__item
+                                .news__item-img
+                                    img(src='images/content/news/' + i + '.jpg').news__item-pic
+                                .news__item-desc
+                                    .news__item-title Изменения в Законе о рекламе в 2019. Товары, реклама которых недопустима.
+                                    .news__item-bottom
+                                        .news__date
+                                            .news__date-name Опубликовано:
+                                            .news__date-date 29.05.2019
+                                        a(href='/').news__item-more.link Читать далее
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+include _mixins
+include _settings
+
+.pag
+    a(href='category.html').pag__item.active 1
+    each i in [2,3,4,5,'...',23]
+        a(href='category.html').pag__item=i
+    a(href='category.html').pag__item.pag__item_all Все

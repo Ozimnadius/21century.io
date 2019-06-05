@@ -48,5 +48,21 @@ window.onload = function () {
         }
     });
 
+    let swiperArticle= new Swiper('.article__container', {
+        direction: 'horizontal',
+        loop: true,
+        speed: 500,
+        slidesPerView: 1,
+        grabCursor: true,
+        autoplay: {
+            delay: 7000,
+        },
+        navigation: {
+            nextEl: '.article__next',
+            prevEl: '.article__prev',
+        }
+
+    });
+
 
 };
