@@ -336,7 +336,100 @@
             <div class="main-boards">
               <div class="container">
                 <div class="main-boards__title title">Поиск Билбордов</div>
-                <div class="main-boards__map"><img src="images/content/main/bilboards.png"></div>
+                <div class="main-boards__map">
+                  <div class="bboards">
+                    <form class="bboards__form">
+                      <div class="row bboards__row">
+                        <div class="bboards__field">
+                          <select class="select" name="direction" placeholder="Направление">
+                            <option value="">Направление</option>
+                            <option value="Юг">Юг</option>
+                            <option value="Север">Север</option>
+                            <option value="Восток">Восток</option>
+                            <option value="Запад">Запад</option>
+                          </select>
+                        </div>
+                        <div class="bboards__field">
+                          <select class="select" name="format" placeholder="Формат конструкции">
+                            <option value="">Формат конструкции</option>
+                            <option value="main">Магистральные щиты</option>
+                            <option value="city">Ситиборды</option>
+                            <option value="super">Суперборды</option>
+                            <option value="cite">Суперсайты</option>
+                            <option value="digital">Цифровые билборды</option>
+                          </select>
+                        </div>
+                        <div class="bboards__field">
+                          <select class="select" name="side" placeholder="Сторона">
+                            <option value="">Сторона</option>
+                            <option value="А">А</option>
+                            <option value="Б">Б</option>
+                          </select>
+                        </div>
+                        <div class="bboards__field">
+                          <select class="select" name="available" placeholder="Занятость">
+                            <option value="">Май</option>
+                            <option value="Май">Май</option>
+                            <option value="Июнь">Июнь</option>
+                            <option value="Июль">Июль</option>
+                          </select>
+                        </div>
+                        <div class="bboards__field">
+                          <select class="select" name="POI" placeholder="POI">
+                            <option value="">POI</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row bboards__row">
+                        <div class="bboards__radios">
+                          <label class="bboards__check radio">
+                            <input class="radio__input" type="radio" name="status" value="0" checked>
+                            <div class="radio__label">
+                              <div class="radio__fake"></div>
+                              <div class="radio__title">Все билборды</div>
+                            </div>
+                          </label>
+                          <label class="bboards__check radio">
+                            <input class="radio__input" type="radio" name="status" value="1">
+                            <div class="radio__label">
+                              <div class="radio__fake"></div>
+                              <div class="radio__title">Свободные билборды</div>
+                            </div>
+                          </label>
+                          <label class="bboards__check radio">
+                            <input class="radio__input" type="radio" name="status" value="2">
+                            <div class="radio__label">
+                              <div class="radio__fake"></div>
+                              <div class="radio__title">Занятые билборды</div>
+                            </div>
+                          </label>
+                          <label class="bboards__check radio">
+                            <input class="radio__input" type="radio" name="status" value="3">
+                            <div class="radio__label">
+                              <div class="radio__fake"></div>
+                              <div class="radio__title">Освобождающиеся</div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="bboards__buttons">
+                          <div class="row">
+                            <button class="bboards__button button2" type="reset">
+                              <div class="button2__title">Сбросить фильтр</div>
+                            </button>
+                            <button class="bboards__button button" type="submit">
+                              <div class="button__title">Отобразить</div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="bboards__map" id="bMap"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -797,6 +890,12 @@
         <input type="hidden" name="action" value="callorder">
         <input type="hidden" name="id" value="465">
       </form>
+    </div>
+  </template>
+  <template id="success">
+    <div class="form__success">
+      <div class="form__success-title">Спасибо за заявку</div>
+      <div class="form__success-subtitle">Наш менеджер свяжется с Вами в ближайшее время.</div>
     </div>
   </template>
   <script src="js/vendor.min.js"></script>

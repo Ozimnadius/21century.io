@@ -24,6 +24,8 @@
         popupWrapper.html(html);
         popup.addClass('active');
 
+        validateForm();
+
     });
 
     $('.jsCallorder').on('click', function (e) {
@@ -41,7 +43,37 @@
         popupWrapper.html(html);
         popup.addClass('active');
 
+        validateForm();
+
     });
+
+    function validateForm(){
+        $('.form').validate(
+            {
+                rules: {
+                    name: "required",
+                    tel: "required",
+                },
+                messages: {
+                    name: "Введите имя",
+                    tel: "Введите телефон"
+                },
+
+                submitHandler: function (form) {
+                    let template = $(document.querySelector('#success').content),
+                        html = template.find('.form__success').clone();
+                        $(form).append(html);
+                },
+                invalidHandler: function (event, validator) {
+                    // debugger;
+                },
+                errorPlacement: function (error, element) {
+                    element[0].placeholder = error[0].innerText;
+                    // debugger;
+                }
+            }
+        );
+    }
 
 
 

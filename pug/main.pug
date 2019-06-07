@@ -154,7 +154,6 @@ html(lang="ru")
 
     button(type='button').callback-button.jsCallback
         +icon('tel', 'callback-button__svg')
-
     .popup
         .popup__wrapper
 
@@ -235,7 +234,10 @@ html(lang="ru")
                 input(type='hidden' name='action' value='callorder')
                 input(type='hidden' name='id' value='465')
 
-
+    template#success
+        .form__success
+            .form__success-title Спасибо за заявку
+            .form__success-subtitle Наш менеджер свяжется с Вами в ближайшее время.
 
     script(src='js/vendor.min.js')
     script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')

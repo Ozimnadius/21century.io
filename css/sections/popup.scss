@@ -70,6 +70,7 @@
 
   &__close {
     position: absolute;
+    z-index: 20;
     top: 19px;
     right: 19px;
     color: $blue;
@@ -159,6 +160,34 @@
   &__button {
     padding: 24px 60px;
   }
+
+  &__success {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $bg;
+    padding: 20px;
+
+    &-title {
+      font-size: 21px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.44px;
+      margin-bottom: 10px;
+    }
+    &-subtitle {
+      font-size: 20px;
+      text-align: center;
+    }
+
+  }
 }
 
 .input {
@@ -170,6 +199,13 @@
   letter-spacing: 0.6px;
   padding: 17px 20px;
 
+  border: 1px solid $white;
+  background-color: $white2;
+
+  &.error {
+    border: 1px solid $red;
+  }
+
   &::placeholder{
     color: rgba($text,.6);
   }
@@ -179,7 +215,92 @@
   }
 }
 
+.radio {
 
+  &__input {
+    display: none;
+
+    &:checked {
+      +.radio__label .radio__fake {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__fake {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 10px;
+
+    &:after {
+      opacity: 0;
+      content: '';
+      width: 8px;
+      height: 8px;
+      background-image: linear-gradient(-45deg, $blue 0%, $blue2 100%);
+      transition: .3s;
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.72px;
+  }
+}
+
+.select {
+
+}
+
+.selectize-control.single .selectize-input{
+  border: 1px solid $white;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  padding: 15px 20px;
+}
+
+.selectize-dropdown, .selectize-input, .selectize-input input {
+  color: $text;
+  font-family: Lato;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.selectize-dropdown{
+  box-shadow: none;
+}
+
+.selectize-dropdown.single{
+  border-color: $white;
+}
+
+.selectize-control.single .selectize-input:after{
+  width: 10px;
+  height: 6px;
+  border: none;
+  background: url("/images/icons/select.png") 0 0;
+}
+
+.selectize-control.single .input-active:after{
+  transform: rotate(-180deg);
+}
 
 .callback {
   height: 100%;
