@@ -6,6 +6,9 @@
     border-top: 1px solid rgba($black-light,.1);
     border-bottom: 1px solid rgba($black-light,.1);
     margin-bottom: 55px;
+    @include md-block{
+      margin-bottom: 40px;
+    };
     &-row {
       align-items: center;
     }
@@ -19,30 +22,77 @@
   &__nav {
     @include col;
     @include size(16);
+    @include md-block{
+      display: none;
+    };
+  }
+
+  &__mobile{
+    display: none;
+    @include md-block{
+      display: flex;
+      justify-content: flex-end;
+    };
+    @include size-md(16);
+
+
+    &-svg {
+      width: 25px;
+      height: 25px;
+      fill: $blue;
+
+    }
   }
 
   &__middle {
     margin-bottom: 55px;
+    @include md-block{
+      margin-bottom: 40px;
+    };
   }
 
   &__left {
     @include col;
     @include size(8);
+    @include size-md(24);
+    @include md-block{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    };
   }
 
   &__right {
     @include col;
     @include size(16);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include md-block{
+      display: none;
+    };
   }
 
   &__contacts {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
+    @include lg-block{
+      justify-content: space-between;
+    };
+    @include md-block{
+      margin-bottom: 40px;
+    };
   }
 
   &__contact {
     margin-right: 65px;
+    @include lg-block{
+      margin-right: 0;
+    };
+    @include md-block{
+      margin-right: 60px;
+    };
     &:last-child {
       margin-right: 0;
     }
@@ -54,14 +104,12 @@
     }
   }
 
-  &__right {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   &__menu {
+    width: calc(100%/3);
     padding-right: 60px;
+    @include lg-block{
+      padding-right: 10px;
+    };
   }
 
   &__item {
@@ -75,9 +123,16 @@
 
     &-svg {
       width: 10px;
+      min-width: 10px;
       height: 10px;
       fill: $blue ;
       margin-right: 20px;
+    }
+
+    &-title {
+      @include lg-block{
+        font-size: 12px;
+      };
     }
   }
 

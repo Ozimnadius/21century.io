@@ -5,12 +5,23 @@
     border: 1px solid $white;
   }
 
-  &__map{
+  &__map {
     height: 653px;
+    @include lg-block {
+      height: 330px;
+    }
+  ;
   }
 
   &__row {
     margin-bottom: 20px;
+    @include lg-block {
+      margin-bottom: 0;
+    }
+    @include md-block{
+      align-items: center;
+    };
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -19,25 +30,48 @@
   &__field {
     @include col;
     @include size(4.8);
+    @include size-lg(12);
+    @include lg-block {
+      margin-bottom: 20px;
+    }
+  ;
   }
 
-  &__radios{
+  &__radios {
     @include col;
     @include size(14.39);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include lg-block {
+      flex-wrap: wrap;
+    }
+    @include size-md(12);
+  }
+
+  &__check {
+    @include lg-block {
+      width: 50%;
+      margin-bottom: 15px;
+    }
+    @include md-block{
+      margin-bottom: 10px;
+    };
   }
 
   &__buttons {
     @include col;
     @include size(9.61);
+    @include size-md(12);
   }
 
   &__button {
     @include col;
     @include size(12);
     padding: 18px;
+    @include md-block{
+      padding: 10px 0;
+    };
   }
 }

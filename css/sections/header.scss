@@ -57,6 +57,26 @@
   &__nav {
     @include col;
     @include size(16);
+    @include md-block{
+      display: none;
+    };
+  }
+
+  &__mobile{
+    display: none;
+    @include md-block{
+      display: flex;
+      justify-content: flex-end;
+    };
+    @include size-md(16);
+
+
+    &-svg {
+      width: 25px;
+      height: 25px;
+      fill: $blue;
+
+    }
   }
 }
 

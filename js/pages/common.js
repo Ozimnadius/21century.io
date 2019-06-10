@@ -74,7 +74,7 @@ function index(list, item) {
     return Array.prototype.indexOf.call(list, item);
 }
 
-$('.select').selectize();
+let selects = $('.select').selectize();
 
 
 

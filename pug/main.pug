@@ -50,6 +50,11 @@ html(lang="ru")
                             //- nav
                             .header__nav
                                 include common/nav
+
+                            //- mobile
+                            .header__mobile
+                                button(type='button').header__mobile-button
+                                    +icon('menu', 'header__mobile-svg')
             //- pages
             .page
                 block content
@@ -65,6 +70,9 @@ html(lang="ru")
                                 include common/nav
 
 
+                            .footer__mobile
+                                button(type='button').footer__mobile-button
+                                    +icon('menu', 'footer__mobile-svg')
                 .footer__middle
                     .container
                         .row

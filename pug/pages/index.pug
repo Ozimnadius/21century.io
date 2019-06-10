@@ -40,7 +40,7 @@ block content
                         .swiper-container.types__container
                             .swiper-wrapper.types__wrapper
                                 each i,x in types
-                                    .swiper-slide
+                                    .swiper-slide.types__wrapper-slide
                                         a(href='category.html').types__slide
                                             .types__slide-img
                                                 img(src='images/content/main/types/' + (x + 1) + '.png').types__slide-pic
@@ -115,7 +115,7 @@ block content
                                 .row.bboards__row
                                     .bboards__radios
                                         label.bboards__check.radio
-                                            input(type='radio' name='status' value=0 checked=true).radio__input
+                                            input(type='radio' name='status' value='' checked=true).radio__input
                                             .radio__label
                                                 .radio__fake
                                                 .radio__title Все билборды

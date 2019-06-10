@@ -32,6 +32,9 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.44px;
+  @include md-block{
+    font-size: 18px;
+  };
 }
 
 .arrow {
@@ -193,6 +196,9 @@
     text-transform: uppercase;
     padding: 20px 0;
     text-align: center;
+    @include md-block{
+      font-size: 8px;
+    };
   }
 
   td, th {
@@ -211,30 +217,66 @@
 
   &__w2 {
     width: 100px;
+    @include md-block{
+      display: none;
+    };
   }
 
   &__w3 {
     width: 335px;
+    @include lg-block{
+      width: 245px;
+    };
+    @include md-block{
+      width: 190px;
+    };
   }
 
   &__w4 {
     width: 125px;
+    @include lg-block{
+      width: 100px;
+    };
+    @include md-block{
+      width: 75px;
+    };
   }
 
   &__w5 {
     width: 130px;
+    @include lg-block{
+      width: 70px;
+    };
+    @include md-block{
+      width: 65px;
+    };
   }
 
   &__w6 {
     width: 150px;
+    @include lg-block{
+      width: 120px;
+    };
+    @include md-block{
+      width: 100px;
+    };
   }
 
   &__w7 {
     width: 150px;
+    @include lg-block{
+      width: 140px;
+    };
+    @include md-block{
+      width: 105px;
+    };
   }
 
   &__item {
     font-size: 12px;
+    @include md-block{
+      font-size: 10px;
+    };
 
     &-num {
       text-align: center;
@@ -256,6 +298,9 @@
     &-addr {
       padding: 15px 20px;
       line-height: lh(12px, 21px);
+      @include md-block{
+        padding: 10px 15px;
+      };
     }
 
     &-size, &-side {
@@ -266,6 +311,12 @@
     &-months {
       padding: 15px;
       padding-left: 30px;
+      @include lg-block{
+        padding-left: 20px;
+      };
+      @include md-block{
+        padding: 10px;
+      };
     }
 
     &-month {
