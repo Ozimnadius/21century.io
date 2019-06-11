@@ -58,8 +58,15 @@
               <div class="header__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a>
               </div>
               <div class="header__nav">
-                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="news.html">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">контакты</a>
+                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="news.html">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">Контакты</a>
                 </div>
+              </div>
+              <div class="header__mobile">
+                <button class="header__mobile-button jsMobileOpen" type="button">
+                                  <svg class="header__mobile-svg">
+                                    <use xlink:href="/images/icons/sprite.svg#menu"></use>
+                                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -80,60 +87,73 @@
                     <div class="product__img"><img class="product__pic" src="images/content/product/product.jpg"></div>
                   </div>
                   <div class="product__right">
-                    <div class="product__info">Подробная информация:</div>
-                    <div class="product__list">
-                      <div class="product__item">
-                        <div class="product__item-name">Статус:</div>
-                        <div class="product__item-value_red product__item-value">Занято</div>
+                    <div class="row">
+                      <div class="product__desc-right">
+                        <div class="product__info">Подробная информация:</div>
+                        <div class="product__list">
+                          <div class="product__item">
+                            <div class="product__item-name">Статус:</div>
+                            <div class="product__item-value_red product__item-value">Занято</div>
+                          </div>
+                          <div class="product__item">
+                            <div class="product__item-name">Статус:</div>
+                            <div class="product__item-value_green product__item-value">Свободно</div>
+                          </div>
+                          <div class="product__item">
+                            <div class="product__item-name">Сторона:</div>
+                            <div class="product__item-value">А</div>
+                          </div>
+                          <div class="product__item">
+                            <div class="product__item-name">Высота (м):</div>
+                            <div class="product__item-value">8</div>
+                          </div>
+                          <div class="product__item">
+                            <div class="product__item-name">Формат (м):</div>
+                            <div class="product__item-value">3 х 6</div>
+                          </div>
+                          <div class="product__item">
+                            <div class="product__item-name">Наличие подсветки:</div>
+                            <div class="product__item-value">Нет</div>
+                          </div>
+                          <div class="product__item">
+                            <div class="product__item-name">Координаты:</div>
+                            <div class="product__item-value">55.771583 / 37.96115</div>
+                          </div>
+                          <div class="product__item">
+                            <div class="product__item-name">Направление:</div>
+                            <div class="product__item-value">в Москву</div>
+                          </div>
+                          <div class="product__item">
+                            <div class="product__item-name">Инвентарный номер::</div>
+                            <div class="product__item-value">624</div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="product__item">
-                        <div class="product__item-name">Статус:</div>
-                        <div class="product__item-value_green product__item-value">Свободно</div>
+                      <div class="product__desc-left">
+                        <div class="product__price"><span class="product__price-name">Стоимость:</span><span class="product__price-price">15 000</span><span class="product__price-cur">Руб./мес.</span></div>
+                        <div class="product__buttons">
+                          <button class="product__button button2 jsCallback" type="button">
+                            <div class="button2__title">Уточнить</div>
+                          </button>
+                          <button class="product__button button jsCallorder" type="button" data-id="456" data-img="images/content/forms/img.jpg" data-price="12 000 руб./мес">
+                            <div class="button__title">Заказать</div>
+                          </button>
+                        </div>
                       </div>
-                      <div class="product__item">
-                        <div class="product__item-name">Сторона:</div>
-                        <div class="product__item-value">А</div>
-                      </div>
-                      <div class="product__item">
-                        <div class="product__item-name">Высота (м):</div>
-                        <div class="product__item-value">8</div>
-                      </div>
-                      <div class="product__item">
-                        <div class="product__item-name">Формат (м):</div>
-                        <div class="product__item-value">3 х 6</div>
-                      </div>
-                      <div class="product__item">
-                        <div class="product__item-name">Наличие подсветки:</div>
-                        <div class="product__item-value">Нет</div>
-                      </div>
-                      <div class="product__item">
-                        <div class="product__item-name">Координаты:</div>
-                        <div class="product__item-value">55.771583 / 37.96115</div>
-                      </div>
-                      <div class="product__item">
-                        <div class="product__item-name">Направление:</div>
-                        <div class="product__item-value">в Москву</div>
-                      </div>
-                      <div class="product__item">
-                        <div class="product__item-name">Инвентарный номер::</div>
-                        <div class="product__item-value">624</div>
-                      </div>
-                    </div>
-                    <div class="product__price"><span class="product__price-name">Стоимость:</span><span class="product__price-price">15 000</span><span class="product__price-cur">Руб./мес.</span></div>
-                    <div class="product__buttons">
-                      <button class="product__button button2 jsCallback" type="button">
-                        <div class="button2__title">Уточнить у менеджера</div>
-                      </button>
-                      <button class="product__button button jsCallorder" type="button" data-id="456" data-img="images/content/forms/img.jpg" data-price="12 000 руб./мес">
-                        <div class="button__title">Заказать размещение</div>
-                      </button>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="product__map">
                 <div class="product__map-title">Местоположение на карте:</div>
-                <div class="product__map-map"><img src="images/content/product/productMap.jpg"></div>
+                <div class="product__map-map">
+                  <div class="bboards">
+                    <form class="bboards__form bboards__form_product">
+                      <input type="hidden" name="id" value="1811">
+                    </form>
+                    <div class="bboards__map bboards__map_product" id="bMap"></div>
+                  </div>
+                </div>
               </div>
               <div class="product__recom">
                 <div class="product__recom-title">Рекомендуемые вам:</div>
@@ -222,8 +242,15 @@
               <div class="footer__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a>
               </div>
               <div class="footer__nav">
-                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="news.html">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">контакты</a>
+                <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="news.html">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">Контакты</a>
                 </div>
+              </div>
+              <div class="footer__mobile">
+                <button class="footer__mobile-button jsMobileOpen" type="button">
+                                  <svg class="footer__mobile-svg">
+                                    <use xlink:href="/images/icons/sprite.svg#menu"></use>
+                                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -354,6 +381,92 @@
   <div class="popup">
     <div class="popup__wrapper"></div>
   </div>
+  <div class="mobile">
+    <div class="mobile__wrapper">
+      <div class="mobile__top">
+        <div class="container">
+          <div class="header__top-row">
+            <div class="header__socials">
+              <div class="socials"><a class="social" href="/">
+                                <svg class="social__svg">
+                                  <use xlink:href="/images/icons/sprite.svg#yt"></use>
+                                </svg></a><a class="social" href="/">
+                                <svg class="social__svg">
+                                  <use xlink:href="/images/icons/sprite.svg#vk"></use>
+                                </svg></a><a class="social" href="/">
+                                <svg class="social__svg">
+                                  <use xlink:href="/images/icons/sprite.svg#insta"></use>
+                                </svg></a><a class="social" href="/">
+                                <svg class="social__svg">
+                                  <use xlink:href="/images/icons/sprite.svg#fb"></use>
+                                </svg></a>
+              </div>
+            </div>
+            <div class="header__contacts">
+              <div class="header__contact"><a class="contact" href="tel:+7(495)6603790">
+                                <svg class="contact__svg">
+                                  <use xlink:href="/images/icons/sprite.svg#phone"></use>
+                                </svg>
+                  <div class="contact__title">+7 495 660 37 90</div></a></div>
+              <div class="header__contact"><a class="contact" href="mailto:+7(495)6603790">
+                                <svg class="contact__svg">
+                                  <use xlink:href="/images/icons/sprite.svg#email"></use>
+                                </svg>
+                  <div class="contact__title">info@21vek.ru</div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile__bottom">
+        <div class="container">
+          <div class="row header__bottom-row">
+            <div class="header__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.svg"></a>
+            </div>
+            <div class="header__nav">
+              <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="news.html">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">Контакты</a>
+              </div>
+            </div>
+            <div class="header__mobile">
+              <button class="header__mobile-button mobile__close jsMobileClose" type="button">
+                              <svg class="header__mobile-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile__menu">
+        <div class="mobile__menu-wrap">
+          <div class="mobile__nav">
+            <div class="nav"><a class="active nav__item" href="/">Главная</a><a class="nav__item" href="about.html">О компании</a><a class="nav__item" href="catalog.html">Типы конструкций</a><a class="nav__item" href="/">Услуги</a><a class="nav__item" href="news.html">Новости </a><a class="nav__item" href="/">Документы</a><a class="nav__item" href="contacts.html">Контакты</a>
+            </div>
+          </div>
+          <div class="mobile__contacts">
+            <div class="mobile__row">
+              <div class="footer__contact"><a class="contact contact_footer" href="tel:+7(495)6603790">
+                              <svg class="contact__svg">
+                                <use xlink:href="/images/icons/sprite.svg#phone"></use>
+                              </svg>
+                  <div class="contact__title">+7 495 660 37 90</div></a></div>
+              <div class="footer__contact"><a class="contact contact_footer" href="mailto:+7(495)6603790">
+                              <svg class="contact__svg">
+                                <use xlink:href="/images/icons/sprite.svg#email"></use>
+                              </svg>
+                  <div class="contact__title">info@21vek.ru</div></a></div>
+            </div>
+            <div class="mobile__row">
+              <div class="footer__contact"><a class="contact contact_footer" href="/">
+                              <svg class="contact__svg">
+                                <use xlink:href="/images/icons/sprite.svg#pin"></use>
+                              </svg>
+                  <div class="contact__title">г. Москва, ул. Пятницкая, д. 25, стр. 1</div></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <template id="callback">
     <div class="callback">
       <form class="callback__form form">
@@ -448,6 +561,12 @@
         <input type="hidden" name="action" value="callorder">
         <input type="hidden" name="id" value="465">
       </form>
+    </div>
+  </template>
+  <template id="success">
+    <div class="form__success">
+      <div class="form__success-title">Спасибо за заявку</div>
+      <div class="form__success-subtitle">Наш менеджер свяжется с Вами в ближайшее время.</div>
     </div>
   </template>
   <script src="js/vendor.min.js"></script>

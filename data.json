@@ -19,7 +19,8 @@
         "side": "A",
         "available": "\u0438\u044e\u043d\u044c",
         "POI": "1",
-        "status": "1"
+        "status": "1",
+        "id": "1811"
       },
       "options": {
         "iconLayout": "default#image",
@@ -44,7 +45,8 @@
         "side": "\u0411",
         "available": "\u043c\u0430\u0439",
         "POI": "2",
-        "status": "2"
+        "status": "2",
+        "id": "1812"
       },
       "options": {
         "iconLayout": "default#image",
@@ -69,7 +71,8 @@
         "side": "\u0411",
         "available": "\u0438\u044e\u043b\u044c",
         "POI": "1",
-        "status": "3"
+        "status": "3",
+        "id": "1813"
       },
       "options": {
         "iconLayout": "default#image",
@@ -94,7 +97,8 @@
         "side": "\u0411",
         "available": "\u0438\u044e\u043d\u044c",
         "POI": "3",
-        "status": "2"
+        "status": "2",
+        "id": "1814"
       },
       "options": {
         "iconLayout": "default#image",
@@ -119,7 +123,8 @@
         "side": "\u0410",
         "available": "\u0438\u044e\u043d\u044c",
         "POI": "4",
-        "status": "1"
+        "status": "1",
+        "id": "1815"
       },
       "options": {
         "iconLayout": "default#image",

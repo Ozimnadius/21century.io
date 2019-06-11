@@ -1,8 +1,10 @@
+let bMap;
+
 ymaps.ready(init);
 
 function init() {
 
-    var bMap = new ymaps.Map('bMap', {
+    bMap = new ymaps.Map('bMap', {
             center: [55.76, 37.64],
             zoom: 10
         }),
@@ -15,9 +17,9 @@ function init() {
             clusterIconLayout: "default#pieChart",
         });
 
-
     bMap.geoObjects.add(objectManager);
     bMap.controls.remove('searchControl');
+    setBoardFilter();
 
     $.ajax({
         url: "data.json"
@@ -27,7 +29,11 @@ function init() {
 
     $('.bboards__form').on('submit', function (e) {
         e.preventDefault();
-        let $this = $(this),
+        setBoardFilter();
+    });
+
+    function setBoardFilter() {
+        let $this = $('.bboards__form'),
             data = $this.serializeArray().filter(function (i, x) {
                 if (i.value) {
                     return i;
@@ -39,7 +45,7 @@ function init() {
         } else {
             objectManager.setFilter();
         }
-    });
+    }
 
     function setFilters(data) {
         return function (obj) {
@@ -55,7 +61,6 @@ function init() {
 
     $('.bboards__form').on('reset', function (e) {
         e.preventDefault();
-        objectManager.setFilter();
 
         selects.each(function (x, i) {
             let selectize = i.selectize;
@@ -72,6 +77,8 @@ function init() {
                 radio.checked = false;
             }
         }
+
+        setBoardFilter();
 
     });
 

@@ -53,7 +53,7 @@ html(lang="ru")
 
                             //- mobile
                             .header__mobile
-                                button(type='button').header__mobile-button
+                                button(type='button').header__mobile-button.jsMobileOpen
                                     +icon('menu', 'header__mobile-svg')
             //- pages
             .page
@@ -71,7 +71,7 @@ html(lang="ru")
 
 
                             .footer__mobile
-                                button(type='button').footer__mobile-button
+                                button(type='button').footer__mobile-button.jsMobileOpen
                                     +icon('menu', 'footer__mobile-svg')
                 .footer__middle
                     .container
@@ -164,6 +164,57 @@ html(lang="ru")
         +icon('tel', 'callback-button__svg')
     .popup
         .popup__wrapper
+
+    .mobile
+        .mobile__wrapper
+            .mobile__top
+                .container
+                    .header__top-row
+                        //- socials
+                        .header__socials
+                            include common/socials
+
+                        //- contacts
+                        .header__contacts
+                            each i in headerContacts
+                                .header__contact
+                                    a(href=i.href).contact
+                                        +icon(i.svg, 'contact__svg')
+                                        .contact__title= i.title
+
+
+            .mobile__bottom
+                .container
+                    .row.header__bottom-row
+                        //- logo
+                        .header__logo
+                            include common/logo
+
+                        //- nav
+                        .header__nav
+                            include common/nav
+
+                        //- mobile
+                        .header__mobile
+                            button(type='button').header__mobile-button.mobile__close.jsMobileClose
+                                +icon('close', 'header__mobile-svg')
+
+            .mobile__menu
+                .mobile__menu-wrap
+                    .mobile__nav
+                        include common/nav
+                    .mobile__contacts
+                        .mobile__row
+                            each i in headerContacts
+                                .footer__contact
+                                    a(href=i.href).contact.contact_footer
+                                        +icon(i.svg, 'contact__svg')
+                                        .contact__title= i.title
+                        .mobile__row
+                            .footer__contact
+                                a(href='/').contact.contact_footer
+                                    +icon('pin', 'contact__svg')
+                                    .contact__title г. Москва, ул. Пятницкая, д. 25, стр. 1
 
     template#callback
         .callback

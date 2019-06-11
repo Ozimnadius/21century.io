@@ -27,33 +27,39 @@ block content
                                 img(src='images/content/product/product.jpg').product__pic
                         //- right
                         .product__right
-                            //- title
-                            .product__info Подробная информация:
-                            //- list
-                            .product__list
-                                each i in productList
-                                    .product__item
-                                        .product__item-name=i.name
-                                        div(class=i.dopClass).product__item-value=i.value
+                            .row
+                                .product__desc-right
+                                    //- title
+                                    .product__info Подробная информация:
+                                    //- list
+                                    .product__list
+                                        each i in productList
+                                            .product__item
+                                                .product__item-name=i.name
+                                                div(class=i.dopClass).product__item-value=i.value
 
 
 
-                            //- price
-                            .product__price
-                                span.product__price-name Стоимость:
-                                span.product__price-price 15 000
-                                span.product__price-cur Руб./мес.
-                            //- buttons
-                            .product__buttons
-                                button(type='button').product__button.button2.jsCallback
-                                    .button2__title Уточнить у менеджера
-                                button(type='button' data-id='456' data-img='images/content/forms/img.jpg' data-price='12 000 руб./мес').product__button.button.jsCallorder
-                                    .button__title Заказать размещение
+                                .product__desc-left
+                                    //- price
+                                    .product__price
+                                        span.product__price-name Стоимость:
+                                        span.product__price-price 15 000
+                                        span.product__price-cur Руб./мес.
+                                    //- buttons
+                                    .product__buttons
+                                        button(type='button').product__button.button2.jsCallback
+                                            .button2__title Уточнить
+                                        button(type='button' data-id='456' data-img='images/content/forms/img.jpg' data-price='12 000 руб./мес').product__button.button.jsCallorder
+                                            .button__title Заказать
                 //- map
                 .product__map
                     .product__map-title Местоположение на карте:
                     .product__map-map
-                        img(src='images/content/product/productMap.jpg')
+                        .bboards
+                            form.bboards__form.bboards__form_product
+                                input(type='hidden' name='id' value='1811')
+                            .bboards__map.bboards__map_product#bMap
                 //- recom
                 .product__recom
                     .product__recom-title Рекомендуемые вам:

@@ -14,6 +14,8 @@
     @include size(6);
     display: block;
     margin-bottom: 30px;
+    @include size-sm(12);
+    @include size-xs(24);
   }
 
   &__banner {
@@ -34,6 +36,15 @@
   height: 100%;
   padding-bottom: 40px;
   transition: .3s;
+  display: flex;
+  flex-direction: column;
+  @include lg-block{
+    padding-bottom: 30px;
+  };
+  @include md-block{
+    padding-bottom: 25px;
+  };
+
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -53,12 +64,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include lg-block{
+      padding: 30px;
+    };
+    @include md-block{
+      height: 140px;
+    };
+    @include sm-block{
+      height: 220px;
+    };
+    img{
+      max-height: 100%;
+    }
   }
 
   &__desc {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: auto;
+    @include md-block{
+      margin-top: initial;
+      flex-grow: 1;
+    };
   }
 
   &__title {
@@ -69,11 +97,21 @@
     text-align: center;
     margin-bottom: 20px;
     transition: .3s;
+    @include lg-block{
+      font-size: 12px;
+    };
+    @include md-block{
+      font-size: 10px;
+      padding: 0 10px;
+    };
   }
 
   &__size {
     display: flex;
     align-items: center;
+    @include md-block{
+      margin-top: auto;
+    };
 
     &-svg {
       width: 21px;
@@ -95,11 +133,32 @@
   background-position: center center;
   background-size: cover;
   padding: 60px 0;
+  @include lg-block{
+    padding: 40px 0;
+  };
+  @include sm-block{
+    background-position: 0 0;
+  };
+  @include xs-block{
+    padding: 20px 0;
+  };
 
   &__content {
     @include col;
     @include size(12);
     @include shift-left(12);
+    @include shift-sm-left(0);
+    @include size-sm(24);
+    @include sm-block{
+      padding: 0 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    };
+    @include xs-block{
+      padding: 0 10px;
+    };
+
   }
 
   &__title {
@@ -109,6 +168,18 @@
     text-transform: uppercase;
     letter-spacing: 2.34px;
     margin-bottom: 13px;
+    @include lg-block{
+      font-size: 30px;
+    };
+    @include md-block{
+      font-size: 24px;
+    };
+    @include sm-block{
+      text-align: center;
+    };
+    @include xs-block{
+      font-size: 18px;
+    };
   }
 
   &__text {
@@ -117,10 +188,23 @@
     line-height: lh(15px,24px);
     letter-spacing: 0.9px;
     margin-bottom: 25px;
+    @include lg-block{
+      font-size: 12px;
+    };
+    @include md-block{
+      font-size: 10px;
+    };
+    @include sm-block{
+      text-align: center;
+    };
   }
 
   &__link {
     display: inline-block;
     padding: 20px 50px;
+    @include xs-block{
+      padding: 10px 30px;
+    };
+
   }
 }

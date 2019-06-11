@@ -75,6 +75,13 @@
         );
     }
 
+    let mobile = $('.mobile');
 
+    $('.jsMobileOpen').on('click', function (e) {
+        mobile.addClass('active');
+    });
+    $('.jsMobileClose').on('click', function (e) {
+        mobile.removeClass('active');
+    });
 
 }());

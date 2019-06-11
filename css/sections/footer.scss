@@ -9,6 +9,9 @@
     @include md-block{
       margin-bottom: 40px;
     };
+    @include xs-block{
+      margin-bottom: 25px;
+    };
     &-row {
       align-items: center;
     }
@@ -49,6 +52,9 @@
     @include md-block{
       margin-bottom: 40px;
     };
+    @include xs-block{
+      margin-bottom: 25px;
+    };
   }
 
   &__left {
@@ -83,6 +89,9 @@
     @include md-block{
       margin-bottom: 40px;
     };
+    @include xs-block{
+      margin-bottom: 20px;
+    };
   }
 
   &__contact {
@@ -96,6 +105,14 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &__socials{
+    @include md-block{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    };
   }
 
   .social {
@@ -139,10 +156,16 @@
   &__bottom {
     background-color: $text;
     padding: 18px 0;
+    @include xs-block{
+      padding: 13px 0;
+    };
     &-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include xs-block{
+        flex-direction: column;
+      };
     }
   }
 

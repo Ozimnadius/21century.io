@@ -15,7 +15,7 @@
   }
 }
 
-.button2{
+.button2 {
   border: 1px solid $white;
   background-color: $white2;
 
@@ -32,9 +32,9 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.44px;
-  @include md-block{
+  @include md-block {
     font-size: 18px;
-  };
+  }
 }
 
 .arrow {
@@ -66,7 +66,7 @@
   flex-wrap: wrap;
 }
 
-.social{
+.social {
   margin-right: 43px;
   transition: .3s;
 
@@ -98,7 +98,7 @@
   display: flex;
   align-items: center;
 
-  &_footer{
+  &_footer {
     .contact {
       &__title {
         color: $text;
@@ -109,7 +109,7 @@
   &__svg {
     width: 13px;
     height: 13px;
-    fill:$blue;
+    fill: $blue;
     margin-right: 10px;
   }
 
@@ -132,6 +132,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include md-block{
+    flex-direction: column;
+    align-items: stretch;
+  };
 
   &__item {
     font-size: 10px;
@@ -139,9 +143,19 @@
     text-transform: uppercase;
     letter-spacing: 0.6px;
     transition: .3s;
+    @include md-block{
+      text-transform: none;
+      padding: 25px;
+      border-bottom: 1px solid rgba($white4,.5);
+      display: block;
+      font-size: 15px;
+    };
+    @include xs-block{
+      padding: 15px;
+    };
 
 
-    &:hover,&.active {
+    &:hover, &.active {
       color: $blue;
     }
   }
@@ -155,7 +169,7 @@
 
 
   &__item {
-    color: rgba($text,.7);
+    color: rgba($text, .7);
     font-size: 12px;
     letter-spacing: 0.72px;
   }
@@ -176,11 +190,12 @@
   background: $bg;
 
   &_white2 {
-    thead{
+    thead {
       background-color: $white2;
     }
-    tbody{
-      tr{
+
+    tbody {
+      tr {
         &:last-child {
           background-color: $white2;
         }
@@ -189,23 +204,23 @@
   }
 
 
-
   th {
     font-size: 10px;
     font-weight: 900;
     text-transform: uppercase;
     padding: 20px 0;
     text-align: center;
-    @include md-block{
+    @include md-block {
       font-size: 8px;
-    };
+    }
+  ;
   }
 
   td, th {
     border: 1px solid $white;
   }
 
-  tr{
+  tr {
     &:last-child {
       height: 20px;
     }
@@ -213,70 +228,96 @@
 
   &__w1 {
     width: 40px;
+    @include sm-block {
+      width: 25px;
+    }
+  ;
   }
 
   &__w2 {
     width: 100px;
-    @include md-block{
+    @include md-block {
       display: none;
-    };
+    }
+  ;
   }
 
   &__w3 {
     width: 335px;
-    @include lg-block{
+    @include lg-block {
       width: 245px;
-    };
-    @include md-block{
+    }
+    @include md-block {
       width: 190px;
+    }
+    @include sm-block{
+      width: 175px;
     };
   }
 
   &__w4 {
     width: 125px;
-    @include lg-block{
+    @include lg-block {
       width: 100px;
-    };
-    @include md-block{
+    }
+    @include md-block {
       width: 75px;
+    }
+    @include xs-block{
+      display: none;
     };
   }
 
   &__w5 {
     width: 130px;
-    @include lg-block{
+    @include lg-block {
       width: 70px;
-    };
-    @include md-block{
+    }
+    @include md-block {
       width: 65px;
+    }
+    @include sm-block{
+      width: 50px;
+    };
+    @include xs-block{
+      display: none;
     };
   }
 
   &__w6 {
     width: 150px;
-    @include lg-block{
+    @include lg-block {
       width: 120px;
-    };
-    @include md-block{
+    }
+  ;
+    @include md-block {
       width: 100px;
-    };
+    }
+  ;
+    @include sm-block {
+      display: none;
+    }
+  ;
   }
 
   &__w7 {
     width: 150px;
-    @include lg-block{
+    @include lg-block {
       width: 140px;
-    };
-    @include md-block{
+    }
+    @include md-block {
       width: 105px;
+    }
+    @include sm-block{
+      width: 95px;
     };
   }
 
   &__item {
     font-size: 12px;
-    @include md-block{
+    @include md-block {
       font-size: 10px;
-    };
+    }
 
     &-num {
       text-align: center;
@@ -298,8 +339,11 @@
     &-addr {
       padding: 15px 20px;
       line-height: lh(12px, 21px);
-      @include md-block{
+      @include md-block {
         padding: 10px 15px;
+      }
+      @include sm-block{
+        padding: 8px 12px;
       };
     }
 
@@ -311,12 +355,14 @@
     &-months {
       padding: 15px;
       padding-left: 30px;
-      @include lg-block{
+      @include lg-block {
         padding-left: 20px;
-      };
-      @include md-block{
+      }
+    ;
+      @include md-block {
         padding: 10px;
-      };
+      }
+    ;
     }
 
     &-month {
@@ -339,10 +385,10 @@
 
     &-price {
       text-align: center;
-      line-height: lh(12,21px);
+      line-height: lh(12, 21px);
     }
 
-    &-order{
+    &-order {
       text-align: center;
       cursor: pointer;
       color: $blue;

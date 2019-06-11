@@ -9,12 +9,22 @@
   z-index: 100;
   top: 377px;
   right: -2px;
+  @include xs-block{
+    top: 50vh;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+  };
 
 
   &__svg {
     width: 29px;
     height: 29px;
     fill: $blue;
+    @include xs-block{
+      width: 20px;
+      height: 20px;
+    };
   }
 }
 
@@ -264,6 +274,9 @@
     letter-spacing: 0.72px;
     @include md-block{
       font-size: 10px;
+    };
+    @include xs-block{
+      font-size: 9px;
     };
   }
 }

@@ -31,7 +31,7 @@ window.onload = function () {
         breakpoints: {
             // when window width is <= 576px
             576: {
-                slidesPerView: 2
+                slidesPerView: 1
             },
             // when window width is <= 768px
             768: {
@@ -54,6 +54,14 @@ window.onload = function () {
         on:{
             init: function () {
                 $('.mnews__tabs').css('height', $(this.wrapperEl).outerHeight());
+            }
+        },
+        breakpoints: {
+            // when window width is <= 640px
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                slidesPerColumn: 2
             }
         }
     });

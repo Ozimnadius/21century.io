@@ -3,14 +3,28 @@
   &__form {
     padding: 30px;
     border: 1px solid $white;
+    &_product {
+      border: none;
+      padding: 0;
+    }
+    @include xs-block{
+      padding: 15px;
+    };
   }
 
   &__map {
     height: 653px;
+    position: relative;
     @include lg-block {
       height: 330px;
     }
-  ;
+    @include xs-block{
+      height: 290px;
+    };
+
+    &_product {
+      height: 327px;
+    }
   }
 
   &__row {
@@ -34,7 +48,13 @@
     @include lg-block {
       margin-bottom: 20px;
     }
-  ;
+    @include size-sm(24);
+
+    &_4 {
+      @include size(6);
+      @include size-lg(12);
+      @include size-sm(24);
+    }
   }
 
   &__radios {
@@ -48,6 +68,7 @@
       flex-wrap: wrap;
     }
     @include size-md(12);
+    @include size-sm(24);
   }
 
   &__check {
@@ -64,6 +85,7 @@
     @include col;
     @include size(9.61);
     @include size-md(12);
+    @include size-sm(24);
   }
 
   &__button {

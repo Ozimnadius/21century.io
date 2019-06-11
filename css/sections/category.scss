@@ -11,6 +11,10 @@
   &__left {
     @include col;
     @include size(8);
+    @include size-sm(24);
+    @include sm-block{
+      margin-bottom: 30px;
+    };
   }
 
   &__img {
@@ -21,11 +25,15 @@
     align-items: center;
     justify-content: center;
     padding: 40px;
+    @include sm-block{
+      padding: 80px;
+    };
   }
 
   &__right {
     @include col;
     @include size(16);
+    @include size-sm(24);
   }
 
   &__map {
@@ -51,9 +59,19 @@
     &-pages {
       font-size: 12px;
       font-weight: 700;
+      @include xs-block{
+        display: none;
+      };
       &_blue {
         color: $blue;
       }
+    }
+    &-pag {
+      @include xs-block{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      };
     }
   }
 
