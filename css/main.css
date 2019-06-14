@@ -3656,6 +3656,76 @@ ul, ol {
   }
 }
 
+.map__link {
+  color: cornflowerblue;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+.map__imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.map__img {
+  width: calc(50% - 10px);
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.map__img-img {
+  max-width: 100%;
+}
+
+.map__table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.map__table tr:nth-child(odd) td {
+  background: lightgray;
+}
+
+.map__table td {
+  padding: 2px 10px;
+  background: #f6f6f6;
+}
+
+.map__table td:nth-child(1) {
+  width: 40%;
+}
+
+.map__table td:nth-child(2) {
+  width: 60%;
+}
+
+.map__link2 {
+  color: cornflowerblue;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+}
+
+.filter__li {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  list-style: none;
+}
+
 /*-----------------SECTION-MOBILE--------------------*/
 .mobile {
   position: fixed;
