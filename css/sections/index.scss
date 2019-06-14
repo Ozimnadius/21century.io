@@ -88,6 +88,7 @@
   height: 880px;
   background-size: cover;
   background-position: center center;
+  position: relative;
   @include lg-block{
     height: 768px;
   };
@@ -101,6 +102,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__img-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 20%);
+    max-width: 50%;
+    @include lg-block{
+      //transform: translate(10%, 30%);
+      max-width: 60%;
+    };
+
+    @include sm-block{
+      max-width: 60%;
+    };
+    @include xs-block{
+      max-width: 80%;
+    };
   }
 
   &__title {

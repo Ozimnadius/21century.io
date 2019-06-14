@@ -13,7 +13,7 @@ block content
                     .swiper-wrapper.slider__wrapper
                         each i in [1,2,3,4]
                             .swiper-slide.slider__slide
-                                div(style='background-image:url(images/content/main/slider/img.jpg)').slide
+                                div(style='background-image:url(/images/content/main/slider/bg.jpg)').slide
                                     .container.slide__container
                                         .slide__title
                                             | наружная реклама
@@ -21,6 +21,8 @@ block content
                                             | на вашей улице
                                         a(href='catalog.html').slide__link.button
                                             .button__title Типы конструкций
+                                .slide__img-wrapper
+                                    img(src="/images/content/main/slider/img.png")
                     // -pagination
                     .slider__pag
                         .container.slider__pag-container

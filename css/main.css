@@ -985,6 +985,7 @@ ul, ol {
   height: 880px;
   background-size: cover;
   background-position: center center;
+  position: relative;
 }
 
 @media screen and (max-width: 1199.99px) {
@@ -1011,6 +1012,36 @@ ul, ol {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.slide__img-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(0, 20%);
+  -ms-transform: translate(0, 20%);
+  transform: translate(0, 20%);
+  max-width: 50%;
+}
+
+@media screen and (max-width: 1199.99px) {
+  .slide__img-wrapper {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .slide__img-wrapper {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 575.99px) {
+  .slide__img-wrapper {
+    max-width: 80%;
+  }
 }
 
 .slide__title {
